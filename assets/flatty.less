@@ -1,0 +1,252 @@
+
+
+// imports font awesome from MaxCDN ------------------------
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+
+// colors --------------------------------------------------
+@symphonyred: #B40B51;
+@grigioscuro: #423A3A;
+@fumo: #f8f8f8;
+@grigioscurissimo: #3A3232;
+@grigiochiaro: #afafaf;
+@green: #66bc00;
+@green2: #6ea32f;
+@mattone: #b34503;
+
+@button: fadeout(@grigiochiaro, 70%);
+@button-hover: fadeout(@grigiochiaro, 40%);
+
+
+// mixin for fontawesome icons ----------------------------
+// easy names 
+@delete: "\f00d";
+@check: "\f00c";
+@new: "\f067";
+@edit: "\f085";
+@test: "X";
+
+.fontawesome(@unicode: "\f001") {
+	&:before {
+		content: @unicode;
+		margin-right: 0.5rem;
+		font-family: FontAwesome;
+		font-size: smaller;
+		position: relative;
+		left: -2px;
+		top: -1px;
+	}
+}
+
+
+// --------------------------------------------------------
+body > div {
+	font-size: 1.35rem;
+}
+
+#session {
+	margin-top: -3.5rem;
+}
+
+#header {
+	h1 {
+		background-color: @grigioscuro;
+		a {
+			color: white;
+			text-shadow: none;
+			font-weight: bold;
+			&:hover {
+				color: @symphonyred;
+			}
+		}
+	}
+	a {
+		color: fadeout(white, 30%);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+nav#nav {
+	background: none;
+	background-color: @grigioscurissimo;
+	min-height: 35px;
+	ul {
+		font-size: 1.4rem;
+		line-height: 3.4rem;
+		a {
+			text-shadow: none;
+			// background-color: @grigioscurissimo;
+			border: none;
+		}
+		a:hover {
+			border: none;
+		}
+	}
+	& > ul > li {
+		text-shadow: none;
+		color: #888;
+		height: 3.4rem;
+		&:hover {
+			height: 3.4rem;
+		}
+		&.active {
+			height: 3.4rem;
+			&:hover {
+				height: 3.4rem;
+			}
+		}
+	}
+	ul > li.active {
+		background-image: none;
+		background-color: #4D78B4;
+		text-shadow: none;
+		height: 3.4rem;
+		border: none;
+	}
+	li > ul {
+		box-shadow: none;
+		border-color: rgba(120,120,120, 0.6);
+		top: 3.4rem;
+		li {
+			&:hover {
+				height: 3.4rem;
+			}
+			a:hover {
+				background-color: fadeout(@grigioscuro, 40%);
+			}
+		}
+	}
+}
+
+h2#symphony-subheading {
+	font-weight: bold;
+	color: @grigioscuro;
+}
+
+.apply {
+	button {
+		height: inherit;
+	}
+}
+
+ul.actions {
+	.button {
+		background-image: none;
+		border: none;
+		padding: 0.2rem 1.3rem;
+		background-color: @button;
+		.fontawesome(@edit);
+		&:hover {
+			background-color: @button-hover;
+		}
+	}
+	.button.create {
+		background-image: none;
+		background-color: @green2;
+		border: none;
+		.fontawesome(@new);
+		&:hover {
+			background-color: darken(@green2, 10%);
+		}
+	}
+}
+
+div.actions {
+	select {
+		margin-top: 0.4rem;
+	}
+	input[type="submit"] {
+
+	}
+}
+
+div.field {
+	input[type="text"] {
+		height: inherit;
+		background-color: @fumo;
+	}
+	textarea {
+		background-color: @fumo;
+	}
+	input, textarea, select[multiple] {
+		border: 1px solid rgba(0,0,0,0.2);
+	}
+}
+
+fieldset.settings {
+	.frame {
+		background-color: lighten(@grigioscuro, 73%);
+	}
+}
+
+fieldset.apply {
+	input[type="submit"] {
+		background-image: none;
+		&:hover {
+			background-image: none;
+		}
+	}
+}
+
+.collapsible {
+	.content {
+		background-color: lighten(@grigioscuro, 70%);
+	}
+}
+
+input[type="submit"] {
+	background-image: none;
+	background-color: @button;
+	border: none;
+	height: inherit;
+	line-height: inherit;
+	padding: 0.5rem 1.3rem;
+	.fontawesome(@test);
+	&:hover {
+		// background-color: fadeout(@grigiochiaro, 30%);
+		background-color: @green2;
+		color: white;
+		background-image: none;
+	}
+}
+
+.notifier {
+	min-height: 2rem;
+	padding-bottom: 0.3rem;
+	p {
+		border-bottom: none;
+		&.notice {
+			background-color: @grigioscuro;
+		}
+		&.notice.success {
+			background-color: @green2;
+			color: fadeout(white, 40%);
+		}
+		color: fadeout(white, 40%);
+	}
+}
+
+button[type="button"] {
+	background-image: none;
+	background-color: @button;
+	border: none;
+	&:hover {
+		background-color: @button-hover;
+	}
+}
+
+button.delete, .button.delete {
+	background-image: none;
+	background-color: @button;
+	border: none;
+	line-height: inherit;
+	padding: 0.5rem 1.3rem;
+	.fontawesome(@delete);
+	&:hover {
+		background-image: none;
+		background-color: @mattone;
+		color: white;
+	}
+}

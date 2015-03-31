@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="flatty" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Admin Flatty</name>
+	<description>This extension overrides Symphony's Admin CSS styles by additional CSS rules. It simply appends a custom stylesheet to the head of admin pages.</description>
+	<!-- <repo type="github">https://github.com/michael-e/admin_css_override</repo> -->
+	<!-- <url type="discuss">http://symphony-cms.com/discuss/thread/22296/</url> -->
+	<types>
+		<type>Interface</type>
+	</types>
+	<authors>
+		<author>
+			<name github="manaus" symphony="Manaus">Max Nardini</name>
+			<website>http://www.coloriamoci.it</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.0" date="2015-03-31" min="2.0.6" max="2.6.x">
+			<![CDATA[- Initial commit]]>
+		</release>
+	</releases>
+</extension>

@@ -1,0 +1,210 @@
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+body > div {
+  font-size: 1.35rem;
+}
+#session {
+  margin-top: -3.5rem;
+}
+#header h1 {
+  background-color: #423a3a;
+}
+#header h1 a {
+  color: white;
+  text-shadow: none;
+  font-weight: bold;
+}
+#header h1 a:hover {
+  color: #b40b51;
+}
+#header a {
+  color: rgba(255, 255, 255, 0.7);
+}
+#header a:hover {
+  color: white;
+}
+nav#nav {
+  background: none;
+  background-color: #3a3232;
+  min-height: 35px;
+}
+nav#nav ul {
+  font-size: 1.4rem;
+  line-height: 3.4rem;
+}
+nav#nav ul a {
+  text-shadow: none;
+  border: none;
+}
+nav#nav ul a:hover {
+  border: none;
+}
+nav#nav > ul > li {
+  text-shadow: none;
+  color: #888;
+  height: 3.4rem;
+}
+nav#nav > ul > li:hover {
+  height: 3.4rem;
+}
+nav#nav > ul > li.active {
+  height: 3.4rem;
+}
+nav#nav > ul > li.active:hover {
+  height: 3.4rem;
+}
+nav#nav ul > li.active {
+  background-image: none;
+  background-color: #4D78B4;
+  text-shadow: none;
+  height: 3.4rem;
+  border: none;
+}
+nav#nav li > ul {
+  box-shadow: none;
+  border-color: rgba(120, 120, 120, 0.6);
+  top: 3.4rem;
+}
+nav#nav li > ul li:hover {
+  height: 3.4rem;
+}
+nav#nav li > ul li a:hover {
+  background-color: rgba(66, 58, 58, 0.6);
+}
+h2#symphony-subheading {
+  font-weight: bold;
+  color: #423a3a;
+}
+.apply button {
+  height: inherit;
+}
+ul.actions .button {
+  background-image: none;
+  border: none;
+  padding: 0.2rem 1.3rem;
+  background-color: rgba(175, 175, 175, 0.3);
+}
+ul.actions .button:before {
+  content: "\f085";
+  margin-right: 0.5rem;
+  font-family: FontAwesome;
+  font-size: smaller;
+  position: relative;
+  left: -2px;
+  top: -1px;
+}
+ul.actions .button:hover {
+  background-color: rgba(175, 175, 175, 0.6);
+}
+ul.actions .button.create {
+  background-image: none;
+  background-color: #6ea32f;
+  border: none;
+}
+ul.actions .button.create:before {
+  content: "\f067";
+  margin-right: 0.5rem;
+  font-family: FontAwesome;
+  font-size: smaller;
+  position: relative;
+  left: -2px;
+  top: -1px;
+}
+ul.actions .button.create:hover {
+  background-color: #537b24;
+}
+div.actions select {
+  margin-top: 0.4rem;
+}
+div.field input[type="text"] {
+  height: inherit;
+  background-color: #f8f8f8;
+}
+div.field textarea {
+  background-color: #f8f8f8;
+}
+div.field input,
+div.field textarea,
+div.field select[multiple] {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+fieldset.settings .frame {
+  background-color: #f9f8f8;
+}
+fieldset.apply input[type="submit"] {
+  background-image: none;
+}
+fieldset.apply input[type="submit"]:hover {
+  background-image: none;
+}
+.collapsible .content {
+  background-color: #f1f0f0;
+}
+input[type="submit"] {
+  background-image: none;
+  background-color: rgba(175, 175, 175, 0.3);
+  border: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
+}
+input[type="submit"]:before {
+  content: "X";
+  margin-right: 0.5rem;
+  font-family: FontAwesome;
+  font-size: smaller;
+  position: relative;
+  left: -2px;
+  top: -1px;
+}
+input[type="submit"]:hover {
+  background-color: #6ea32f;
+  color: white;
+  background-image: none;
+}
+.notifier {
+  min-height: 2rem;
+  padding-bottom: 0.3rem;
+}
+.notifier p {
+  border-bottom: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+.notifier p.notice {
+  background-color: #423a3a;
+}
+.notifier p.notice.success {
+  background-color: #6ea32f;
+  color: rgba(255, 255, 255, 0.6);
+}
+button[type="button"] {
+  background-image: none;
+  background-color: rgba(175, 175, 175, 0.3);
+  border: none;
+}
+button[type="button"]:hover {
+  background-color: rgba(175, 175, 175, 0.6);
+}
+button.delete,
+.button.delete {
+  background-image: none;
+  background-color: rgba(175, 175, 175, 0.3);
+  border: none;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
+}
+button.delete:before,
+.button.delete:before {
+  content: "\f00d";
+  margin-right: 0.5rem;
+  font-family: FontAwesome;
+  font-size: smaller;
+  position: relative;
+  left: -2px;
+  top: -1px;
+}
+button.delete:hover,
+.button.delete:hover {
+  background-image: none;
+  background-color: #b34503;
+  color: white;
+}
