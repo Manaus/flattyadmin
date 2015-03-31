@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension id="Flatty" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>Flatty</name>
-	<description>This extension is an admin flat styling built upon the existing Symphony css.</description>
+	<description>This extension is an admin flat styling built upon the existing Symphony css. 
+		Inspired by Admin_css_override by Michael Eichelsdoerfer.
+	</description>
 	<repo type="github">https://github.com/Manaus/Flatty</repo>
 	<types>
 		<type>Interface</type>
