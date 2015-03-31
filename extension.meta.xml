@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension id="flatty" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+<extension id="Flatty" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>Flatty</name>
-	<description>This extension is an admin flat styling built upon the existing Symphony css.
-	</description>
+	<description>This extension is an admin flat styling built upon the existing Symphony css.</description>
 	<repo type="github">https://github.com/Manaus/Flatty</repo>
-	<!-- <url type="discuss">http://symphony-cms.com/discuss/thread/XXX/</url> -->
 	<types>
 		<type>Interface</type>
 	</types>
 	<authors>
 		<author>
-			<name github="manaus" symphony="Manaus">Max Nardini</name>
+			<name github="Manaus" symphony="Manaus">Max Nardini</name>
 			<website>http://www.coloriamoci.it</website>
 		</author>
 	</authors>
