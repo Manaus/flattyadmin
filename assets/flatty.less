@@ -2,7 +2,7 @@
 
 // imports font awesome from MaxCDN ------------------------
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
-
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,700,400italic");
 
 // colors --------------------------------------------------
 @symphonyred: #B40B51;
@@ -41,6 +41,11 @@
 
 
 // --------------------------------------------------------
+
+body {
+	font-family: "Roboto";
+}
+
 body > div {
 	font-size: 1.35rem;
 }
@@ -259,4 +264,8 @@ button.delete, .button.delete {
 	}
 }
 
+input[type="checkbox"] {
+	position: relative;
+	top: 1.5px;
+}
 
