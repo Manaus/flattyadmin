@@ -24,9 +24,10 @@
 @check: "\f00c";
 @new: "\f067";
 @edit: "\f085";
+@paper: "\f016";
 @test: "X";
 
-.fontawesome(@unicode: "\f001") {
+.fontawesome(@unicode: @test) {
 	&:before {
 		content: @unicode;
 		margin-right: 0.5rem;
@@ -34,7 +35,7 @@
 		font-size: smaller;
 		position: relative;
 		left: -2px;
-		top: -1px;
+		top: 0px;
 	}
 }
 
@@ -129,6 +130,11 @@ h2#symphony-subheading {
 	button {
 		height: inherit;
 	}
+	&:hover {
+		button {
+			border-left: none;
+		}
+	}
 }
 
 ul.actions {
@@ -146,7 +152,7 @@ ul.actions {
 		background-image: none;
 		background-color: @green2;
 		border: none;
-		.fontawesome(@new);
+		.fontawesome(@paper);
 		&:hover {
 			background-color: darken(@green2, 10%);
 		}
@@ -213,10 +219,11 @@ input[type="submit"] {
 }
 
 .notifier {
-	min-height: 2rem;
-	padding-bottom: 0.3rem;
+	// min-height: 2rem;
+	// padding-bottom: 0.3rem;
 	p {
 		border-bottom: none;
+		padding-bottom: 0.4rem;
 		&.notice {
 			background-color: @grigioscuro;
 		}
@@ -250,3 +257,8 @@ button.delete, .button.delete {
 		color: white;
 	}
 }
+
+button.constructor {
+	// border: inherit;
+}
+
