@@ -3,7 +3,7 @@
 	<name>Flatty</name>
 	<description>This extension is an admin flat styling built upon the existing Symphony css.
 	</description>
-	<!-- <repo type="github">https://github.com/</repo> -->
+	<repo type="github">https://github.com/Manaus/Flatty</repo>
 	<!-- <url type="discuss">http://symphony-cms.com/discuss/thread/XXX/</url> -->
 	<types>
 		<type>Interface</type>
