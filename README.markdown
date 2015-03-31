@@ -1,7 +1,8 @@
 # Admin Flatty
 
 This extension is an attempt to flat down interface elements in the Symphony 
-CMS admin side.
+CMS admin side. It comprises a .less file, which imports the Font Awesome 
+icons set. 
 
 
 ## Installation
