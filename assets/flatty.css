@@ -1,4 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,700,400italic");
+body {
+  font-family: "Roboto";
+}
 body > div {
   font-size: 1.35rem;
 }
