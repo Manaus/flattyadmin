@@ -133,11 +133,14 @@ div.field select[multiple] {
 fieldset.settings .frame {
   background-color: #f9f8f8;
 }
-fieldset.apply input[type="submit"] {
+fieldset.apply input[type="submit"],
+fieldset.apply button[type="submit"] {
   background-image: none;
 }
-fieldset.apply input[type="submit"]:hover {
+fieldset.apply input[type="submit"]:hover,
+fieldset.apply button[type="submit"]:hover {
   background-image: none;
+  border-left: none;
 }
 .collapsible .content {
   background-color: #f1f0f0;

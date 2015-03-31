@@ -188,10 +188,11 @@ fieldset.settings {
 }
 
 fieldset.apply {
-	input[type="submit"] {
+	input[type="submit"], button[type="submit"] {
 		background-image: none;
 		&:hover {
 			background-image: none;
+			border-left: none;
 		}
 	}
 }
@@ -258,7 +259,4 @@ button.delete, .button.delete {
 	}
 }
 
-button.constructor {
-	// border: inherit;
-}
 
