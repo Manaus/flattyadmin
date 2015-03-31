@@ -1,7 +1,5 @@
 
 
-// imports font awesome from MaxCDN ------------------------
-@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,700,400italic");
 
 // colors --------------------------------------------------
@@ -18,32 +16,10 @@
 @button-hover: fadeout(@grigiochiaro, 40%);
 
 
-// mixin for fontawesome icons ----------------------------
-// easy names 
-@delete: "\f00d";
-@check: "\f00c";
-@new: "\f067";
-@edit: "\f085";
-@paper: "\f016";
-@test: "X";
-
-.fontawesome(@unicode: @test) {
-	&:before {
-		content: @unicode;
-		margin-right: 0.5rem;
-		font-family: FontAwesome;
-		font-size: smaller;
-		position: relative;
-		left: -2px;
-		top: 0px;
-	}
-}
-
-
 // --------------------------------------------------------
 
 body {
-	font-family: "Roboto";
+	// font-family: "Roboto";
 }
 
 body > div {
@@ -148,7 +124,6 @@ ul.actions {
 		border: none;
 		padding: 0.2rem 1.3rem;
 		background-color: @button;
-		.fontawesome(@edit);
 		&:hover {
 			background-color: @button-hover;
 		}
@@ -157,7 +132,6 @@ ul.actions {
 		background-image: none;
 		background-color: @green2;
 		border: none;
-		.fontawesome(@paper);
 		&:hover {
 			background-color: darken(@green2, 10%);
 		}
@@ -215,7 +189,6 @@ input[type="submit"] {
 	height: inherit;
 	line-height: inherit;
 	padding: 0.5rem 1.3rem;
-	.fontawesome(@test);
 	&:hover {
 		// background-color: fadeout(@grigiochiaro, 30%);
 		background-color: @green2;
@@ -256,7 +229,6 @@ button.delete, .button.delete {
 	border: none;
 	line-height: inherit;
 	padding: 0.5rem 1.3rem;
-	.fontawesome(@delete);
 	&:hover {
 		background-image: none;
 		background-color: @mattone;
