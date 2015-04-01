@@ -15,7 +15,7 @@
 		</author>
 	</authors>
 	<releases>
-		<release version="1.0" date="2015-03-31" min="2.3">
+		<release version="1.0" date="2015-03-31" min="2.6">
 			<![CDATA[- Initial commit]]>
 		</release>
 	</releases>
