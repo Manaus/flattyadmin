@@ -1,4 +1,4 @@
-All source code included in the "Flatty" Symphony Extension 
+All source code included in the "Flatty Admin" Symphony Extension 
 archive is, unless otherwise specified, released under the MIT licence as 
 follows:
 

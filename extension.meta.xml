@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension id="flatty-admin" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
+<extension id="flattyadmin" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
 	<name>Flatty Admin</name>
 	<description>This extension is an admin flat styling built upon the existing Symphony css. 
 		Inspired by admin_css_override by Michael Eichelsdoerfer.
@@ -7,7 +7,7 @@
 	<description lang="it">
 		L'estensione è un tema per l'admin di Symphony Cms, ispirato al lavoro di Michael Eichelsdoerfer. 
 	</description>
-	<repo type="github">https://github.com/Manaus/flatty</repo>
+	<repo type="github">https://github.com/Manaus/flattyadmin</repo>
 	<url type="discuss">http://www.getsymphony.com/discuss/thread/110128/</url>
 	<types>
 		<type>Interface</type>

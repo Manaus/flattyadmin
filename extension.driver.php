@@ -1,6 +1,6 @@
 <?php
 
-	Class extension_flatty extends Extension{
+	Class extension_flattyadmin extends Extension{
 
 		public function getSubscribedDelegates(){
 			return array(
@@ -17,7 +17,7 @@
 	-------------------------------------------------------------------------*/
 
 		public function appendAssets() {
-			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/flatty/assets/flatty.css', 'screen', 1000, false);
+			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/flattyadmin/assets/flatty.css', 'screen', 1000, false);
 		}
 
 	}
