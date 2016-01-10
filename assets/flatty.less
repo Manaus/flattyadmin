@@ -3,7 +3,9 @@
 
 
 // colors --------------------------------------------------
+
 @symphonyred: #B40B51;
+@symphonyblue: #4D78B4;
 @grigioscuro: #423A3A;
 @fumo: #f8f8f8;
 @grigioscurissimo: #3A3232;
@@ -11,12 +13,14 @@
 @green: #66bc00;
 @green2: #6ea32f;
 @mattone: #b34503;
+@brown: #BD7053;
 
 @button: fadeout(@grigiochiaro, 70%);
 @button-hover: fadeout(@grigiochiaro, 40%);
 
-
 // --------------------------------------------------------
+
+
 
 body > div {
 	font-size: 1.2rem;
@@ -55,7 +59,6 @@ nav#nav {
 		line-height: 3.4rem;
 		a {
 			text-shadow: none;
-			// background-color: @grigioscurissimo;
 			border: none;
 		}
 		a:hover {
@@ -78,7 +81,7 @@ nav#nav {
 	}
 	ul > li.active {
 		background-image: none;
-		background-color: #4D78B4;
+		background-color: @symphonyblue;
 		text-shadow: none;
 		height: 3.4rem;
 		border: none;
@@ -112,6 +115,15 @@ h2#symphony-subheading {
 			border-left: none;
 		}
 	}
+	select:hover {
+		background-position: top right;
+	}
+
+}
+.apply-label-left {
+	height: inherit;
+	background-image: none;
+	background-color: @button;
 }
 
 ul.actions {
@@ -130,6 +142,13 @@ ul.actions {
 		border: none;
 		&:hover {
 			background-color: darken(@green2, 10%);
+		}
+	}
+	.button.link-preview {
+		background-color: @button;
+		&:hover {
+			background-color: @button-hover;
+			background-image: none;
 		}
 	}
 }
@@ -193,12 +212,11 @@ input[type="submit"] {
 	}
 }
 
-.notifier {
-	// min-height: 2rem;
-	// padding-bottom: 0.3rem;
+div.notifier {
 	p {
 		border-bottom: none;
 		padding-bottom: 0.4rem;
+		color: fadeout(white, 40%);
 		&.notice {
 			background-color: @grigioscuro;
 		}
@@ -206,7 +224,19 @@ input[type="submit"] {
 			background-color: @green2;
 			color: fadeout(white, 40%);
 		}
-		color: fadeout(white, 40%);
+		&.notice.success.dimmed a {
+			color: fadeout(white, 60%);
+			border-bottom-color: fadeout(white, 60%);
+			&:hover {
+				color: white;
+				border-bottom-color: #fff;
+			}
+		}
+		&.notice.error.active {
+			a {
+				color: mix(@brown, yellow);
+			}
+		}
 	}
 }
 
@@ -232,8 +262,19 @@ button.delete, .button.delete {
 	}
 }
 
-input[type="checkbox"] {
-	position: relative;
-	top: 1.5px;
+select {
+	font-size: 1.3rem;
+	padding: 0.1rem 0.1rem 0.2rem;
+}
+select[multiple="multiple"] {
+	option {
+		padding: 0.2rem 0.3rem;
+	}
 }
 
+label.column {
+	i {
+		top: 3px;
+		right: 6px;
+	}
+}

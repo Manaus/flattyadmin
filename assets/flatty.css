@@ -5,7 +5,7 @@ body > div {
   margin-top: -3.5rem;
 }
 #header h1 {
-  background-color: #423a3a;
+  background-color: #423A3A;
 }
 #header h1 a {
   color: white;
@@ -13,7 +13,7 @@ body > div {
   font-weight: bold;
 }
 #header h1 a:hover {
-  color: #b40b51;
+  color: #B40B51;
 }
 #header a {
   color: rgba(255, 255, 255, 0.7);
@@ -23,7 +23,7 @@ body > div {
 }
 nav#nav {
   background: none;
-  background-color: #3a3232;
+  background-color: #3A3232;
   min-height: 35px;
 }
 nav#nav ul {
@@ -71,13 +71,21 @@ nav#nav li > ul li a:hover {
 }
 h2#symphony-subheading {
   font-weight: bold;
-  color: #423a3a;
+  color: #423A3A;
 }
 .apply button {
   height: inherit;
 }
 .apply:hover button {
   border-left: none;
+}
+.apply select:hover {
+  background-position: top right;
+}
+.apply-label-left {
+  height: inherit;
+  background-image: none;
+  background-color: rgba(175, 175, 175, 0.3);
 }
 ul.actions .button {
   background-image: none;
@@ -95,6 +103,13 @@ ul.actions .button.create {
 }
 ul.actions .button.create:hover {
   background-color: #537b24;
+}
+ul.actions .button.link-preview {
+  background-color: rgba(175, 175, 175, 0.3);
+}
+ul.actions .button.link-preview:hover {
+  background-color: rgba(175, 175, 175, 0.6);
+  background-image: none;
 }
 div.actions select {
   margin-top: 0.4rem;
@@ -139,17 +154,28 @@ input[type="submit"]:hover {
   color: white;
   background-image: none;
 }
-.notifier p {
+div.notifier p {
   border-bottom: none;
   padding-bottom: 0.4rem;
   color: rgba(255, 255, 255, 0.6);
 }
-.notifier p.notice {
-  background-color: #423a3a;
+div.notifier p.notice {
+  background-color: #423A3A;
 }
-.notifier p.notice.success {
+div.notifier p.notice.success {
   background-color: #6ea32f;
   color: rgba(255, 255, 255, 0.6);
+}
+div.notifier p.notice.success.dimmed a {
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+div.notifier p.notice.success.dimmed a:hover {
+  color: white;
+  border-bottom-color: #fff;
+}
+div.notifier p.notice.error.active a {
+  color: #deb82a;
 }
 button[type="button"] {
   background-image: none;
@@ -173,7 +199,14 @@ button.delete:hover,
   background-color: #b34503;
   color: white;
 }
-input[type="checkbox"] {
-  position: relative;
-  top: 1.5px;
+select {
+  font-size: 1.3rem;
+  padding: 0.1rem 0.1rem 0.2rem;
+}
+select[multiple="multiple"] option {
+  padding: 0.2rem 0.3rem;
+}
+label.column i {
+  top: 3px;
+  right: 6px;
 }

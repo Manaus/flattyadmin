@@ -8,7 +8,7 @@
 		L'estensione è un tema per l'admin di Symphony Cms, ispirato al lavoro di Michael Eichelsdoerfer. 
 	</description>
 	<repo type="github">https://github.com/Manaus/flattyadmin</repo>
-	<url type="discuss">http://www.getsymphony.com/discuss/thread/110128/</url>
+	<url type="discuss">http://www.getsymphony.com/discuss/thread/111506/</url>
 	<types>
 		<type>Interface</type>
 	</types>
@@ -19,6 +19,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.1" date="2016-01-10" min="2.4">
+			<![CDATA[- Fix of some input-select-parts]]>
+		</release>
 		<release version="1.0" date="2015-03-31" min="2.4">
 			<![CDATA[- Initial commit]]>
 		</release>
