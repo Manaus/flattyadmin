@@ -136,7 +136,7 @@ fieldset.apply button[type="submit"] {
 fieldset.apply input[type="submit"]:hover,
 fieldset.apply button[type="submit"]:hover {
   background-image: none;
-  border-left: none;
+  border-left: 1px solid #ccc;
 }
 .collapsible .content {
   background-color: #f1f0f0;
