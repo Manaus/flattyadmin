@@ -77,7 +77,7 @@ h2#symphony-subheading {
   height: inherit;
 }
 .apply:hover button {
-  border-left: none;
+  border-left: 1px solid #ccc;
 }
 .apply select:hover {
   background-position: top right;

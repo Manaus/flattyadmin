@@ -8,6 +8,6 @@ CMS admin side. It comprises a .less file, for customization.
 1. Upload the `flattyadmin` folder in this archive to your Symphony 
    'extensions' folder.
 
-2. Enable it by selecting the "flatty", choose Enable from the 
+2. Enable it by selecting the "Flatty Admin" extension, choose Enable from the 
    with-selected menu, then click Apply.
 

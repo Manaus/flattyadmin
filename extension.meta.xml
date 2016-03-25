@@ -19,6 +19,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.2" date="2016-03-25" min="2.4">
+			<![CDATA[- Fixed an annoying bug in the bottom selects/buttons]]>
+		</release>
 		<release version="1.1" date="2016-01-10" min="2.4">
 			<![CDATA[- Fix of some input-select-parts]]>
 		</release>
