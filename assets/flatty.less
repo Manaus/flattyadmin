@@ -23,11 +23,9 @@
 body > div {
 	font-size: 1.2rem;
 }
-
 #session {
 	margin-top: -3.5rem;
 }
-
 #header {
 	h1 {
 		background-color: @grigioscuro;
@@ -47,7 +45,6 @@ body > div {
 		}
 	}
 }
-
 nav#nav {
 	background: none;
 	background-color: @grigioscurissimo;
@@ -98,7 +95,6 @@ nav#nav {
 		}
 	}
 }
-
 h2#symphony-subheading {
 	font-weight: bold;
 	color: @grigioscuro;
@@ -116,14 +112,12 @@ h2#symphony-subheading {
 	select:hover {
 		background-position: top right;
 	}
-
 }
 .apply-label-left {
 	height: inherit;
 	background-image: none;
 	background-color: @button;
 }
-
 ul.actions {
 	.button {
 		background-image: none;
@@ -150,7 +144,6 @@ ul.actions {
 		}
 	}
 }
-
 div.actions {
 	select {
 		margin-top: 0.4rem;
@@ -159,7 +152,6 @@ div.actions {
 
 	}
 }
-
 div.field {
 	input[type="text"] {
 		height: inherit;
@@ -172,29 +164,26 @@ div.field {
 		border: 1px solid rgba(0,0,0,0.2);
 	}
 }
-
 fieldset.settings {
 	.frame {
 		background-color: lighten(@grigioscuro, 73%);
 	}
 }
-
 fieldset.apply {
-	input[type="submit"], button[type="submit"] {
+	input[type="submit"], button[type="submit"], button[type="button"], button.constructor {
 		background-image: none;
+		border-left: 1px solid transparent;
 		&:hover {
 			background-image: none;
 			border-left: 1px solid #ccc;
 		}
 	}
 }
-
 .collapsible {
 	.content {
 		background-color: lighten(@grigioscuro, 70%);
 	}
 }
-
 input[type="submit"] {
 	background-image: none;
 	background-color: @button;
@@ -203,13 +192,11 @@ input[type="submit"] {
 	line-height: inherit;
 	padding: 0.5rem 1.3rem;
 	&:hover {
-		// background-color: fadeout(@grigiochiaro, 30%);
 		background-color: @green2;
 		color: white;
 		background-image: none;
 	}
 }
-
 div.notifier {
 	p {
 		border-bottom: none;
@@ -237,7 +224,6 @@ div.notifier {
 		}
 	}
 }
-
 button[type="button"] {
 	background-image: none;
 	background-color: @button;
@@ -246,7 +232,6 @@ button[type="button"] {
 		background-color: @button-hover;
 	}
 }
-
 button.delete, .button.delete {
 	background-image: none;
 	background-color: @button;
@@ -259,7 +244,6 @@ button.delete, .button.delete {
 		color: white;
 	}
 }
-
 select {
 	font-size: 1.3rem;
 	padding: 0.1rem 0.1rem 0.2rem;
