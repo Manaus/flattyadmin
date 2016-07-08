@@ -101,6 +101,7 @@ h2#symphony-subheading {
 }
 
 .apply {
+	// height: 2.2rem;
 	button {
 		height: inherit;
 	}
@@ -109,8 +110,11 @@ h2#symphony-subheading {
 			border-left: 1px solid #ccc;
 		}
 	}
-	select:hover {
-		background-position: top right;
+	select {
+		line-height: 1.4rem;
+		&:hover {
+			background-position: top right;
+		}
 	}
 }
 .apply-label-left {
@@ -165,8 +169,28 @@ div.field {
 	}
 }
 fieldset.settings {
+	select {
+		font-size: 1.9rem;
+		margin-top: 3px;
+		&[multiple="multiple"] {
+			font-size: 1.3rem;
+			option {
+				// padding: 0 0 0 .3rem;
+				margin: 1rem;
+			}
+		}
+	}
 	.frame {
 		background-color: lighten(@grigioscuro, 73%);
+	}
+	.apply select {
+		line-height: 1.8rem;
+		font-size: inherit;
+	}
+	&.contextual {
+		select {
+			line-height: 1.8rem;
+		}
 	}
 }
 fieldset.apply {
@@ -177,6 +201,9 @@ fieldset.apply {
 			background-image: none;
 			border-left: 1px solid #ccc;
 		}
+	}
+	button.constructor {
+		padding: 0.1rem 1rem;
 	}
 }
 .collapsible {

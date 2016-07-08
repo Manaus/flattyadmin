@@ -79,6 +79,9 @@ h2#symphony-subheading {
 .apply:hover button {
   border-left: 1px solid #ccc;
 }
+.apply select {
+  line-height: 1.4rem;
+}
 .apply select:hover {
   background-position: top right;
 }
@@ -126,8 +129,25 @@ div.field textarea,
 div.field select[multiple] {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+fieldset.settings select {
+  font-size: 1.9rem;
+  margin-top: 3px;
+}
+fieldset.settings select[multiple="multiple"] {
+  font-size: 1.3rem;
+}
+fieldset.settings select[multiple="multiple"] option {
+  margin: 1rem;
+}
 fieldset.settings .frame {
   background-color: #f9f8f8;
+}
+fieldset.settings .apply select {
+  line-height: 1.8rem;
+  font-size: inherit;
+}
+fieldset.settings.contextual select {
+  line-height: 1.8rem;
 }
 fieldset.apply input[type="submit"],
 fieldset.apply button[type="submit"],
@@ -142,6 +162,9 @@ fieldset.apply button[type="button"]:hover,
 fieldset.apply button.constructor:hover {
   background-image: none;
   border-left: 1px solid #ccc;
+}
+fieldset.apply button.constructor {
+  padding: 0.1rem 1rem;
 }
 .collapsible .content {
   background-color: #f1f0f0;
