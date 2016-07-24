@@ -1,8 +1,7 @@
 
 
 
-
-// colors --------------------------------------------------
+// variables --------------------------------------------------
 
 @symphonyred: #B40B51;
 @symphonyblue: #4D78B4;
@@ -14,14 +13,33 @@
 @green2: #6ea32f;
 @mattone: #b34503;
 @brown: #BD7053;
+@red: #c4301e;
+@white: #fff;
 
 @button: fadeout(@grigiochiaro, 70%);
 @button-hover: fadeout(@grigiochiaro, 40%);
 
+@rowheight: 3.4rem;
+@selectfontsize: 2rem;
+@mozfontsize: 1.3rem;
+@link: @symphonyblue;
+
+// mixins -------------------------------------------------
+
+.applybuttons() {
+	background-image: none;
+	border-left: 1px solid transparent;
+	padding: 0.1rem 1rem;
+	&:hover {
+		background-image: none;
+		border-left: 1px solid #ccc;
+	}
+}
+
 // --------------------------------------------------------
 
 body > div {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 }
 #session {
 	margin-top: -3.5rem;
@@ -31,8 +49,8 @@ body > div {
 		background-color: @grigioscuro;
 		a {
 			color: white;
-			text-shadow: none;
 			font-weight: bold;
+			text-shadow: none;
 			&:hover {
 				color: @symphonyred;
 			}
@@ -51,43 +69,43 @@ nav#nav {
 	min-height: 35px;
 	ul {
 		font-size: 1.4rem;
-		line-height: 3.4rem;
+		line-height: @rowheight;
 		a {
+			border: none;
 			text-shadow: none;
-			border: none;
-		}
-		a:hover {
-			border: none;
+			&:hover {
+				border: none;
+			}
 		}
 	}
 	& > ul > li {
 		text-shadow: none;
 		color: #888;
-		height: 3.4rem;
+		height: @rowheight;
 		&:hover {
-			height: 3.4rem;
+			height: @rowheight;
 		}
 		&.active {
-			height: 3.4rem;
+			height: @rowheight;
 			&:hover {
-				height: 3.4rem;
+				height: @rowheight;
 			}
 		}
 	}
 	ul > li.active {
 		background-image: none;
 		background-color: @symphonyblue;
-		text-shadow: none;
-		height: 3.4rem;
 		border: none;
+		height: @rowheight;
+		text-shadow: none;
 	}
 	li > ul {
-		box-shadow: none;
 		border-color: rgba(120,120,120, 0.6);
-		top: 3.4rem;
+		box-shadow: none;
+		top: @rowheight;
 		li {
 			&:hover {
-				height: 3.4rem;
+				height: @rowheight;
 			}
 			a:hover {
 				background-color: fadeout(@grigioscuro, 40%);
@@ -96,12 +114,10 @@ nav#nav {
 	}
 }
 h2#symphony-subheading {
-	font-weight: bold;
 	color: @grigioscuro;
+	font-weight: bold;
 }
-
 .apply {
-	// height: 2.2rem;
 	button {
 		height: inherit;
 	}
@@ -112,98 +128,188 @@ h2#symphony-subheading {
 	}
 	select {
 		line-height: 1.4rem;
+		font-size: @selectfontsize/1.5;
+		position: relative;
+		top: -.1rem;
+		@-moz-document url-prefix() {
+			top: -.3rem;
+		}
 		&:hover {
 			background-position: top right;
 		}
 	}
+	& > div {
+		position: relative;
+		top: .2rem;
+	}
 }
 .apply-label-left {
-	height: inherit;
-	background-image: none;
 	background-color: @button;
+	background-image: none;
+	height: inherit;
 }
-ul.actions {
-	.button {
-		background-image: none;
-		border: none;
-		padding: 0.2rem 1.3rem;
-		background-color: @button;
-		&:hover {
-			background-color: @button-hover;
-		}
-	}
-	.button.create {
-		background-image: none;
-		background-color: @green2;
-		border: none;
-		&:hover {
-			background-color: darken(@green2, 10%);
-		}
-	}
-	.button.link-preview {
-		background-color: @button;
-		&:hover {
-			background-color: @button-hover;
+ul {
+	&.actions {
+		.button {
+			background-color: @button;
 			background-image: none;
-		}
-	}
-}
-div.actions {
-	select {
-		margin-top: 0.4rem;
-	}
-	input[type="submit"] {
-
-	}
-}
-div.field {
-	input[type="text"] {
-		height: inherit;
-		background-color: @fumo;
-	}
-	textarea {
-		background-color: @fumo;
-	}
-	input, textarea, select[multiple] {
-		border: 1px solid rgba(0,0,0,0.2);
-	}
-}
-fieldset.settings {
-	select {
-		font-size: 1.9rem;
-		margin-top: 3px;
-		&[multiple="multiple"] {
-			font-size: 1.3rem;
-			option {
-				// padding: 0 0 0 .3rem;
-				margin: 1rem;
+			border: none;
+			padding: 0.2rem 1.3rem;
+			&:hover {
+				background-color: @button-hover;
+			}
+			&.create {
+				background-color: @green2;
+				background-image: none;
+				border: none;
+				&:hover {
+					background-color: darken(@green2, 10%);
+				}
+			}
+			&.link-preview {
+				background-color: @button;
+				&:hover {
+					background-color: @button-hover;
+					background-image: none;
+				}
 			}
 		}
 	}
-	.frame {
-		background-color: lighten(@grigioscuro, 73%);
-	}
-	.apply select {
-		line-height: 1.8rem;
-		font-size: inherit;
-	}
-	&.contextual {
+}
+div {
+	&.actions {
 		select {
-			line-height: 1.8rem;
+			margin-top: 0.4rem;
+		}
+	}
+	&.field {
+		input {
+			&[type="file"] {
+				border: none;
+			}
+			&[type="text"] {
+				height: inherit;
+				background-color: @fumo;
+			}
+		}
+		textarea {
+			background-color: @fumo;
+		}
+		input, 
+		textarea, 
+		select[multiple] {
+			border: 1px solid rgba(0,0,0,0.2);
+		}
+		select {
+			font-size: @selectfontsize;
+			margin-top: 0.1rem;
+		}
+	}
+	&.notifier {
+		p {
+			border-bottom: none;
+			color: fadeout(white, 40%);
+			padding-bottom: 0.4rem;
+			&.notice {
+				background-color: @grigioscuro;
+			}
+			&.notice.success {
+				background-color: @green2;
+				color: fadeout(white, 40%);
+			}
+			&.notice.success.dimmed a {
+				border-bottom-color: fadeout(white, 60%);
+				color: fadeout(white, 60%);
+				&:hover {
+					border-bottom-color: #fff;
+					color: white;
+				}
+			}
+			&.notice.error.active {
+				a {
+					color: mix(@brown, yellow);
+				}
+			}
+		}
+	}
+	&#drawer-filtering {
+		.button {
+			background-color: @button;
+			background-image: none;
+			border: none;
+			&:hover {
+				background-color: @button-hover;
+			}
+		}
+		.selectize-control {
+			background-color: @white;
+		}
+		.filtering-comparison {
+			.selectize-input {
+				background-image: none;
+				background-color: @button;
+				// &.item {
+				// 	background-color: @grigiochiaro;
+				// 	background-image: none;
+				// 	input {
+				// 		// background-color: @white;
+				// 	}
+				// }
+			}
 		}
 	}
 }
-fieldset.apply {
-	input[type="submit"], button[type="submit"], button[type="button"], button.constructor {
-		background-image: none;
-		border-left: 1px solid transparent;
-		&:hover {
-			background-image: none;
-			border-left: 1px solid #ccc;
+fieldset {
+	&.settings {
+		select {
+			// mozilla only 
+			@-moz-document url-prefix() {
+				font-size: @mozfontsize;
+				&[multiple='multiple'] {
+					font-size: @mozfontsize;
+				}
+			}
+			option {
+				font-size: @selectfontsize/1.6;
+				@-moz-document url-prefix() {
+					font-size: @mozfontsize;
+				}
+			}
+		}
+		.frame {
+			background-color: lighten(@grigioscuro, 73%);
+		}
+		.apply {
+			select {
+				line-height: 1.8rem;
+				font-size: inherit;
+			}
+		}
+		&.contextual {
+			select {
+				line-height: 1.8rem;
+			}
 		}
 	}
-	button.constructor {
-		padding: 0.1rem 1rem;
+	&.apply {
+		input[type="submit"] {
+			.applybuttons();
+		}
+		button {
+			&[type='submit'], 
+			&[type='button'], 
+			&.constructor {
+				.applybuttons();
+			}
+		}
+		& > div {
+			position: relative;
+			top: 0.2rem;
+		}		
+		select {
+			position: relative;
+			top: -.1rem;
+		}
 	}
 }
 .collapsible {
@@ -211,79 +317,86 @@ fieldset.apply {
 		background-color: lighten(@grigioscuro, 70%);
 	}
 }
-input[type="submit"] {
-	background-image: none;
-	background-color: @button;
-	border: none;
-	height: inherit;
-	line-height: inherit;
-	padding: 0.5rem 1.3rem;
-	&:hover {
-		background-color: @green2;
-		color: white;
+input {
+	&[type='submit'] {
 		background-image: none;
-	}
-}
-div.notifier {
-	p {
-		border-bottom: none;
-		padding-bottom: 0.4rem;
-		color: fadeout(white, 40%);
-		&.notice {
-			background-color: @grigioscuro;
-		}
-		&.notice.success {
+		background-color: @button;
+		border: none;
+		height: inherit;
+		line-height: inherit;
+		padding: 0.5rem 1.3rem;
+		&:hover {
 			background-color: @green2;
-			color: fadeout(white, 40%);
-		}
-		&.notice.success.dimmed a {
-			color: fadeout(white, 60%);
-			border-bottom-color: fadeout(white, 60%);
-			&:hover {
-				color: white;
-				border-bottom-color: #fff;
-			}
-		}
-		&.notice.error.active {
-			a {
-				color: mix(@brown, yellow);
-			}
+			background-image: none;
+			color: white;
 		}
 	}
+	&[type="text"] {
+		padding: .3rem .5rem;
+	}
 }
-button[type="button"] {
-	background-image: none;
-	background-color: @button;
-	border: none;
-	&:hover {
-		background-color: @button-hover;
+button {
+	&[type='button'] {
+		background-color: @button;
+		background-image: none;
+		border: none;
+		&:hover {
+			background-color: @button-hover;
+		}
 	}
 }
 button.delete, .button.delete {
-	background-image: none;
 	background-color: @button;
+	background-image: none;
 	border: none;
 	line-height: inherit;
 	padding: 0.5rem 1.3rem;
 	&:hover {
-		background-image: none;
 		background-color: @mattone;
+		background-image: none;
 		color: white;
 	}
 }
-select {
-	font-size: 1.3rem;
-	padding: 0.1rem 0.1rem 0.2rem;
+.button {
+	&.selected {
+		// box-shadow: inset 0 0 .15rem @grigioscurissimo;
+		box-shadow: none;
+		text-shadow: none;
+		// outline: 1px solid @green;
+	}
 }
-select[multiple="multiple"] {
-	option {
-		padding: 0.2rem 0.3rem;
+select {
+	font-size: @selectfontsize;
+	@-moz-document url-prefix() {
+		font-size: @mozfontsize;
+	}
+	padding: 0.1rem 0.1rem 0.2rem;
+	&[multiple='multiple'] {
+		option {
+			padding: 0.2rem 0.3rem;
+		}
+	}
+}
+label {
+	&.column {
+		i {
+			right: 6px;
+			top: 3px;
+		}
+	}
+}
+table {
+	&.selectable {
+		tr {
+			&.inactive {
+				td {
+					// color: @red;
+				}
+			}
+			&.status-error {
+				// color: @red;
+			}
+		}
 	}
 }
 
-label.column {
-	i {
-		top: 3px;
-		right: 6px;
-	}
-}
