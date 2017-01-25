@@ -1,3 +1,6 @@
+body {
+  font-size: 1.3rem;
+}
 body > div {
   font-size: 1.3rem;
 }
@@ -5,25 +8,25 @@ body > div {
   margin-top: -3.5rem;
 }
 #header h1 {
-  background-color: #423A3A;
+  background-color: #423a3a;
 }
 #header h1 a {
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   text-shadow: none;
 }
 #header h1 a:hover {
-  color: #B40B51;
+  color: #b40b51;
 }
 #header a {
   color: rgba(255, 255, 255, 0.7);
 }
 #header a:hover {
-  color: white;
+  color: #ffffff;
 }
 nav#nav {
-  background: none;
-  background-color: #3A3232;
+  background-color: #3a3232;
+  background-image: none;
   min-height: 35px;
 }
 nav#nav ul {
@@ -53,7 +56,7 @@ nav#nav > ul > li.active:hover {
 }
 nav#nav ul > li.active {
   background-image: none;
-  background-color: #4D78B4;
+  background-color: #4d78b4;
   border: none;
   height: 3.4rem;
   text-shadow: none;
@@ -70,7 +73,7 @@ nav#nav li > ul li a:hover {
   background-color: rgba(66, 58, 58, 0.6);
 }
 h2#symphony-subheading {
-  color: #423A3A;
+  color: #423a3a;
   font-weight: bold;
 }
 .apply button {
@@ -81,14 +84,12 @@ h2#symphony-subheading {
 }
 .apply select {
   line-height: 1.4rem;
-  font-size: 1.33333333rem;
+  font-size: 1.3rem;
   position: relative;
   top: -0.1rem;
 }
 @-moz-document url-prefix() {
-  .apply select {
-    top: -0.3rem;
-  }
+  top: -0.3rem;
 }
 .apply select:hover {
   background-position: top right;
@@ -102,32 +103,44 @@ h2#symphony-subheading {
   background-image: none;
   height: inherit;
 }
-ul.actions .button {
+ul.actions a.button {
   background-color: rgba(175, 175, 175, 0.3);
   background-image: none;
   border: none;
-  padding: 0.2rem 1.3rem;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
 }
-ul.actions .button:hover {
+ul.actions a.button:hover {
   background-color: rgba(175, 175, 175, 0.6);
+  background-image: none;
+  color: inherit;
 }
-ul.actions .button.create {
+ul.actions a.create {
   background-color: #6ea32f;
   background-image: none;
   border: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
 }
-ul.actions .button.create:hover {
+ul.actions a.create:hover {
   background-color: #537b24;
+  background-image: none;
+  color: #ffffff;
 }
-ul.actions .button.link-preview {
+ul.actions a.link-preview {
   background-color: rgba(175, 175, 175, 0.3);
+  background-image: none;
+  border: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
 }
-ul.actions .button.link-preview:hover {
+ul.actions a.link-preview:hover {
   background-color: rgba(175, 175, 175, 0.6);
   background-image: none;
-}
-div.actions select {
-  margin-top: 0.4rem;
+  color: inherit;
 }
 div.field input[type="file"] {
   border: none;
@@ -145,7 +158,7 @@ div.field select[multiple] {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 div.field select {
-  font-size: 2rem;
+  font-size: 1.3rem;
   margin-top: 0.1rem;
 }
 div.notifier p {
@@ -154,7 +167,7 @@ div.notifier p {
   padding-bottom: 0.4rem;
 }
 div.notifier p.notice {
-  background-color: #423A3A;
+  background-color: #423a3a;
 }
 div.notifier p.notice.success {
   background-color: #6ea32f;
@@ -166,7 +179,7 @@ div.notifier p.notice.success.dimmed a {
 }
 div.notifier p.notice.success.dimmed a:hover {
   border-bottom-color: #fff;
-  color: white;
+  color: #ffffff;
 }
 div.notifier p.notice.error.active a {
   color: #deb82a;
@@ -180,37 +193,51 @@ div#drawer-filtering .button:hover {
   background-color: rgba(175, 175, 175, 0.6);
 }
 div#drawer-filtering .selectize-control {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 div#drawer-filtering .filtering-comparison .selectize-input {
   background-image: none;
   background-color: rgba(175, 175, 175, 0.3);
 }
+div.field-datetime input.start {
+  border: none;
+}
 @-moz-document url-prefix() {
-  fieldset.settings select {
-    font-size: 1.3rem;
-  }
-  fieldset.settings select[multiple='multiple'] {
+  font-size: 1.3rem;
+  
+  [multiple='multiple'] {
     font-size: 1.3rem;
   }
 }
 fieldset.settings select option {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 @-moz-document url-prefix() {
-  fieldset.settings select option {
-    font-size: 1.3rem;
-  }
+  font-size: 1.3rem;
 }
 fieldset.settings .frame {
   background-color: #f9f8f8;
+  border: none;
 }
-fieldset.settings .apply select {
+fieldset.settings div.apply select {
   line-height: 1.8rem;
   font-size: inherit;
 }
 fieldset.settings.contextual select {
   line-height: 1.8rem;
+}
+fieldset.settings div#file-actions button {
+  background-color: rgba(175, 175, 175, 0.3);
+  background-image: none;
+  border: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
+}
+fieldset.settings div#file-actions button:hover {
+  background-color: rgba(175, 175, 175, 0.6);
+  background-image: none;
+  color: inherit;
 }
 fieldset.apply input[type="submit"] {
   background-image: none;
@@ -246,8 +273,8 @@ fieldset.apply select {
   background-color: #f1f0f0;
 }
 input[type='submit'] {
-  background-image: none;
   background-color: rgba(175, 175, 175, 0.3);
+  background-image: none;
   border: none;
   height: inherit;
   line-height: inherit;
@@ -256,24 +283,33 @@ input[type='submit'] {
 input[type='submit']:hover {
   background-color: #6ea32f;
   background-image: none;
-  color: white;
+  color: #ffffff;
 }
 input[type="text"] {
   padding: .3rem .5rem;
+}
+input[type="file"] {
+  border: none;
 }
 button[type='button'] {
   background-color: rgba(175, 175, 175, 0.3);
   background-image: none;
   border: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
 }
 button[type='button']:hover {
   background-color: rgba(175, 175, 175, 0.6);
+  background-image: none;
+  color: inherit;
 }
 button.delete,
 .button.delete {
   background-color: rgba(175, 175, 175, 0.3);
   background-image: none;
   border: none;
+  height: inherit;
   line-height: inherit;
   padding: 0.5rem 1.3rem;
 }
@@ -281,20 +317,46 @@ button.delete:hover,
 .button.delete:hover {
   background-color: #b34503;
   background-image: none;
-  color: white;
+  color: #ffffff;
+}
+button.apply-filters {
+  background-color: rgba(175, 175, 175, 0.3);
+  background-image: none;
+  border: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
+  padding: .3rem 1rem;
+}
+button.apply-filters:hover {
+  background-color: rgba(175, 175, 175, 0.6);
+  background-image: none;
+  color: inherit;
+}
+button.clear-filters {
+  background-color: rgba(175, 175, 175, 0.3);
+  background-image: none;
+  border: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
+  padding: .3rem 1rem;
+}
+button.clear-filters:hover {
+  background-color: rgba(175, 175, 175, 0.6);
+  background-image: none;
+  color: inherit;
 }
 .button.selected {
   box-shadow: none;
   text-shadow: none;
 }
 select {
-  font-size: 2rem;
+  font-size: 1.3rem;
   padding: 0.1rem 0.1rem 0.2rem;
 }
 @-moz-document url-prefix() {
-  select {
-    font-size: 1.3rem;
-  }
+  font-size: 1.3rem;
 }
 select[multiple='multiple'] option {
   padding: 0.2rem 0.3rem;
@@ -302,4 +364,23 @@ select[multiple='multiple'] option {
 label.column i {
   right: 6px;
   top: 3px;
+}
+div.actions {
+  overflow: hidden;
+}
+div.actions select {
+  font-size: 1.3rem;
+}
+section.association.child a.button {
+  background-color: rgba(175, 175, 175, 0.3);
+  background-image: none;
+  border: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0.5rem 1.3rem;
+}
+section.association.child a.button:hover {
+  background-color: rgba(175, 175, 175, 0.6);
+  background-image: none;
+  color: inherit;
 }
