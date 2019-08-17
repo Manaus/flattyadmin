@@ -19,6 +19,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.4.2" date="2019-08-17" min="2.4">
+			<![CDATA[- Removed focus underline]]>
+		</release>
 		<release version="1.4.1" date="2019-08-17" min="2.4">
 			<![CDATA[- Changed header link color]]>
 		</release>

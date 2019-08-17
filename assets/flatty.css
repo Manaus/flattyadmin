@@ -18,6 +18,9 @@ body > div {
 #header h1 a:hover {
   text-decoration: underline;
 }
+#header h1 a:focus {
+  border-bottom: none;
+}
 #header a {
   color: rgba(255, 255, 255, 0.7);
 }
