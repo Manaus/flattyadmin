@@ -74,7 +74,7 @@ body > div {
 			font-weight: bold;
 			text-shadow: none;
 			&:hover {
-				color: @symphony-red;
+				text-decoration: underline;
 			}
 		}
 	}
@@ -195,8 +195,8 @@ div {
 		textarea {
 			background-color: @fumo;
 		}
-		input, 
-		textarea, 
+		input,
+		textarea,
 		select[multiple] {
 			border: 1px solid rgba(0,0,0,0.2);
 		}
@@ -259,7 +259,7 @@ div.field-datetime {
 }
 fieldset.settings {
 	select {
-		// mozilla only 
+		// mozilla only
 		@-moz-document url-prefix() {
 			font-size: @moz-font-size;
 			&[multiple='multiple'] {
@@ -299,8 +299,8 @@ fieldset.apply {
 		.apply-buttons();
 	}
 	button {
-		&[type='submit'], 
-		&[type='button'], 
+		&[type='submit'],
+		&[type='button'],
 		&.constructor {
 			.apply-buttons();
 		}
@@ -308,7 +308,7 @@ fieldset.apply {
 	& > div {
 		position: relative;
 		top: 0.2rem;
-	}		
+	}
 	select {
 		position: relative;
 		top: -.1rem;
@@ -384,6 +384,11 @@ table {
 		}
 	}
 }
+
+textarea.markdown {
+	padding: .5rem;
+}
+
 div.actions {
 	overflow: hidden;
 	select {

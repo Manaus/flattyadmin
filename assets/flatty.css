@@ -8,24 +8,24 @@ body > div {
   margin-top: -3.5rem;
 }
 #header h1 {
-  background-color: #423a3a;
+  background-color: #423A3A;
 }
 #header h1 a {
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   text-shadow: none;
 }
 #header h1 a:hover {
-  color: #b40b51;
+  text-decoration: underline;
 }
 #header a {
   color: rgba(255, 255, 255, 0.7);
 }
 #header a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 nav#nav {
-  background-color: #3a3232;
+  background-color: #3A3232;
   background-image: none;
   min-height: 35px;
 }
@@ -56,7 +56,7 @@ nav#nav > ul > li.active:hover {
 }
 nav#nav ul > li.active {
   background-image: none;
-  background-color: #4d78b4;
+  background-color: #4D78B4;
   border: none;
   height: 3.4rem;
   text-shadow: none;
@@ -73,7 +73,7 @@ nav#nav li > ul li a:hover {
   background-color: rgba(66, 58, 58, 0.6);
 }
 h2#symphony-subheading {
-  color: #423a3a;
+  color: #423A3A;
   font-weight: bold;
 }
 .apply button {
@@ -89,14 +89,16 @@ h2#symphony-subheading {
   top: -0.1rem;
 }
 @-moz-document url-prefix() {
-  top: -0.3rem;
+  .apply select {
+    top: -0.3rem;
+  }
 }
 .apply select:hover {
   background-position: top right;
 }
 .apply > div {
   position: relative;
-  top: .2rem;
+  top: 0.2rem;
 }
 .apply-label-left {
   background-color: rgba(175, 175, 175, 0.3);
@@ -127,7 +129,7 @@ ul.actions a.create {
 ul.actions a.create:hover {
   background-color: #537b24;
   background-image: none;
-  color: #ffffff;
+  color: #fff;
 }
 ul.actions a.link-preview {
   background-color: rgba(175, 175, 175, 0.3);
@@ -167,7 +169,7 @@ div.notifier p {
   padding-bottom: 0.4rem;
 }
 div.notifier p.notice {
-  background-color: #423a3a;
+  background-color: #423A3A;
 }
 div.notifier p.notice.success {
   background-color: #6ea32f;
@@ -179,7 +181,7 @@ div.notifier p.notice.success.dimmed a {
 }
 div.notifier p.notice.success.dimmed a:hover {
   border-bottom-color: #fff;
-  color: #ffffff;
+  color: #fff;
 }
 div.notifier p.notice.error.active a {
   color: #deb82a;
@@ -193,7 +195,7 @@ div#drawer-filtering .button:hover {
   background-color: rgba(175, 175, 175, 0.6);
 }
 div#drawer-filtering .selectize-control {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 div#drawer-filtering .filtering-comparison .selectize-input {
   background-image: none;
@@ -203,9 +205,10 @@ div.field-datetime input.start {
   border: none;
 }
 @-moz-document url-prefix() {
-  font-size: 1.3rem;
-  
-  [multiple='multiple'] {
+  fieldset.settings select {
+    font-size: 1.3rem;
+  }
+  fieldset.settings select[multiple='multiple'] {
     font-size: 1.3rem;
   }
 }
@@ -213,7 +216,9 @@ fieldset.settings select option {
   font-size: 1.3rem;
 }
 @-moz-document url-prefix() {
-  font-size: 1.3rem;
+  fieldset.settings select option {
+    font-size: 1.3rem;
+  }
 }
 fieldset.settings .frame {
   background-color: #f9f8f8;
@@ -283,10 +288,10 @@ input[type='submit'] {
 input[type='submit']:hover {
   background-color: #6ea32f;
   background-image: none;
-  color: #ffffff;
+  color: #fff;
 }
 input[type="text"] {
-  padding: .3rem .5rem;
+  padding: 0.3rem 0.5rem;
 }
 input[type="file"] {
   border: none;
@@ -317,7 +322,7 @@ button.delete:hover,
 .button.delete:hover {
   background-color: #b34503;
   background-image: none;
-  color: #ffffff;
+  color: #fff;
 }
 button.apply-filters {
   background-color: rgba(175, 175, 175, 0.3);
@@ -326,7 +331,7 @@ button.apply-filters {
   height: inherit;
   line-height: inherit;
   padding: 0.5rem 1.3rem;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
 }
 button.apply-filters:hover {
   background-color: rgba(175, 175, 175, 0.6);
@@ -340,7 +345,7 @@ button.clear-filters {
   height: inherit;
   line-height: inherit;
   padding: 0.5rem 1.3rem;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
 }
 button.clear-filters:hover {
   background-color: rgba(175, 175, 175, 0.6);
@@ -356,7 +361,9 @@ select {
   padding: 0.1rem 0.1rem 0.2rem;
 }
 @-moz-document url-prefix() {
-  font-size: 1.3rem;
+  select {
+    font-size: 1.3rem;
+  }
 }
 select[multiple='multiple'] option {
   padding: 0.2rem 0.3rem;
@@ -364,6 +371,9 @@ select[multiple='multiple'] option {
 label.column i {
   right: 6px;
   top: 3px;
+}
+textarea.markdown {
+  padding: 0.5rem;
 }
 div.actions {
   overflow: hidden;
